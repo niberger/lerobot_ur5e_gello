@@ -31,11 +31,11 @@ class UR5E(Robot):
         # servoJ streaming parameters
         # Use a finite period so the controller gracefully holds until next update
         # and does not require a perfect 125 Hz stream from Python/HTTP loop
-        self.acc = 0.5
-        self.speed = 0.5
-        self.servoj_t = 1.0 / 500
-        self.servoj_lookahead = 0.2
-        self.servoj_gain = 100
+        self.acc = 0.0
+        self.speed = 0.0
+        self.servoj_t = 1.0 / 15
+        self.servoj_lookahead = 0.03
+        self.servoj_gain = 1000.0
 
         # Gripper command throttling
         self._last_gripper_pos: Optional[int] = None
